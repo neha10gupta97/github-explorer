@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import TextField from "@material-ui/core/TextField";
-import "./App.css";
+import Button from "@material-ui/core/Button";
+
 import UserInfo from "./User/UserInfo";
 import { fetchUser } from "./actions/action";
+
+import "./index.css";
 
 interface DispatchProps {
   fetchUser: (userName: string) => void;
@@ -26,14 +29,22 @@ const App: React.FC<DispatchProps> = props => {
   };
 
   return (
-    <div className="App">
-      <TextField
-        placeholder="User Name"
-        onChange={updateUserName}
-        value={userName}
-      />
-      <button onClick={searchUser}>Search</button>
-      <UserInfo />
+    <div>
+      <div className="center-y">
+        <TextField
+          placeholder="Search by User Name"
+          onChange={updateUserName}
+          value={userName}
+          variant={"outlined"}
+        />
+        <div className="mx-10" />
+        <Button onClick={searchUser} color={"primary"} variant={"contained"}>
+          Search
+        </Button>
+      </div>
+      <div className="user-info-wrapper">
+      <UserInfo userName={userName} />
+      </div>
     </div>
   );
 };

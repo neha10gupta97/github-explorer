@@ -1,17 +1,33 @@
 import * as React from "react";
 import { connect } from "react-redux";
+import Avatar from "@material-ui/core/Avatar";
+
 import { GlobalState } from "../reducers/appReducer";
 import { User } from "./user";
+
+interface Props {
+  userName: string;
+}
 
 interface StateProps {
   user?: User;
 }
 
-const UserInfo: React.FunctionComponent<StateProps> = ({ user }) => {
-  return !user ? null : (
+const UserInfo: React.FunctionComponent<Props & StateProps> = ({
+  user,
+  userName
+}) => {
+  if (!user) {
+    return null;
+  }
+  return user.message ? (
+    <div className="mt-10">
+      No User found with username: <b>{userName}</b>
+    </div>
+  ) : (
     <div className="flex">
-      <img src={user.avatar_url} width={50} height={50} alt={"User Avatar"} />
-      <div>{user.login}</div>
+      <Avatar src={user.avatar_url} alt={"User Avatar"} className="avatar"/>
+      <div className="ml-10 font-2">{user.name || user.login}</div>
     </div>
   );
 };
