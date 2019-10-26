@@ -4,12 +4,9 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.5.1",
-    "@types/jest": "24.0.17",
-    "@types/node": "12.7.2",
-    "@types/react": "16.9.2",
-    "@types/react-dom": "16.8.5",
-    "@types/react-redux": "^7.1.2",
-    "@types/redux-logger": "^3.0.7",
+    "@material-ui/icons": "^4.5.1",
+    "@material-ui/styles": "^4.5.0",
+    "d3": "^5.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.0",
@@ -41,6 +38,13 @@
     ]
   },
   "devDependencies": {
-    "@types/material-ui": "^0.21.7"
+    "@types/d3": "^5.7.2",
+    "@types/jest": "24.0.17",
+    "@types/material-ui": "^0.21.7",
+    "@types/node": "12.7.2",
+    "@types/react": "16.9.2",
+    "@types/react-dom": "16.8.5",
+    "@types/react-redux": "^7.1.2",
+    "@types/redux-logger": "^3.0.7"
   }
 }

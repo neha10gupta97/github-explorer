@@ -3,11 +3,9 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import TextField from "@material-ui/core/TextField";
 import Button from "@material-ui/core/Button";
-
-import UserInfo from "./User/UserInfo";
 import { fetchUser } from "./actions/action";
-
 import "./index.css";
+import UserInfo from "./components/User/UserInfo";
 
 interface DispatchProps {
   fetchUser: (userName: string) => void;
@@ -43,7 +41,7 @@ const App: React.FC<DispatchProps> = props => {
         </Button>
       </div>
       <div className="user-info-wrapper">
-      <UserInfo userName={userName} />
+        <UserInfo userName={userName} />
       </div>
     </div>
   );

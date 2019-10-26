@@ -1,5 +1,5 @@
 import { Action, userActions } from "../actions/action";
-import { User } from "../User/user";
+import { User } from "../components/User/user";
 
 export interface GlobalState {
   isLoading: boolean;
