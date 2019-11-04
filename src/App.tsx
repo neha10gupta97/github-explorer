@@ -28,6 +28,7 @@ const App: React.FC<DispatchProps> = props => {
 
   return (
     <div>
+      Hi
       <div className="center-y">
         <TextField
           placeholder="Search by User Name"
