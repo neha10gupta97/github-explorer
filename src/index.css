@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-size: 10px;
 }
@@ -33,10 +37,7 @@ body {
   font-size: 2rem;
 }
 
-
-
-
-.user-info-wrapper{
+.user-info-wrapper {
   margin-top: 20px;
 }
 .avatar {

@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import { fetchUser } from "./actions/action";
 import "./index.css";
 import UserInfo from "./components/User/UserInfo";
+import Layout from "./components/Layout";
 
 interface DispatchProps {
   fetchUser: (userName: string) => void;
@@ -27,8 +28,7 @@ const App: React.FC<DispatchProps> = props => {
   };
 
   return (
-    <div>
-      Hii
+    <Layout>
       <div className="center-y">
         <TextField
           placeholder="Search by User Name"
@@ -44,7 +44,7 @@ const App: React.FC<DispatchProps> = props => {
       <div className="user-info-wrapper">
         <UserInfo userName={userName} />
       </div>
-    </div>
+    </Layout>
   );
 };
 
