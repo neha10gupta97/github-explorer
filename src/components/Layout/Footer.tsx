@@ -4,5 +4,5 @@ import React from "react";
 const useStyles = makeStyles((theme: Theme) => createStyles({}));
 
 export default function Footer() {
-  return <div>Footer</div>;
+  return <div></div>;
 }

@@ -29,19 +29,20 @@ const App: React.FC<DispatchProps> = props => {
 
   return (
     <Layout>
-      <div className="center-y">
+      <div className='center-xy mt-10'>
         <TextField
-          placeholder="Search by User Name"
+          placeholder='Search by User Name'
           onChange={updateUserName}
           value={userName}
           variant={"outlined"}
+          className='w-1/2'
         />
-        <div className="mx-10" />
+        <div className='mx-10' />
         <Button onClick={searchUser} color={"primary"} variant={"contained"}>
           Search
         </Button>
       </div>
-      <div className="user-info-wrapper">
+      <div className='user-info-wrapper'>
         <UserInfo userName={userName} />
       </div>
     </Layout>
@@ -52,7 +53,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => ({
   fetchUser: (userName: string) => dispatch(fetchUser(userName))
 });
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(App);
+export default connect(null, mapDispatchToProps)(App);
