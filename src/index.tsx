@@ -9,6 +9,7 @@ import reducer from "./reducers/appReducer";
 import rootSaga from "./sagas/saga";
 
 import "./index.css";
+import './styles/tailwind.css';
 
 const sagaMiddleware = createSagaMiddleware();
 
